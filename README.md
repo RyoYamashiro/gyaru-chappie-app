@@ -1,40 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 💄✨チャッピーに任せて💅🌈
 
-## Getting Started
+このアプリは、Next.js + OpenAI APIでつくった**爆速チャットアプリ**です💬✨  
+ギャル口調で返事してくれるチャッピーがあなたの質問にテンアゲでお返事してくれます💘
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 主な機能
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 💌 ユーザーが質問を入力すると、OpenAI APIに送信して回答を取得
+- 💅 チャッピーはギャルっぽく回答（プロンプトに仕込みあり）
+- 🌸 シンプルで見やすいUI（Tailwind CSS使用）
+- ⚡ ローディング中は「考え中〜💭」と表示
+- 💾 リロード時は履歴リセット（あえて軽量設計）
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🛠 使用技術
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+| 項目 | 内容 |
+|------|------|
+| フレームワーク | Next.js（Pages Router） |
+| スタイリング | Tailwind CSS |
+| API | OpenAI GPT-3.5 Turbo |
+| デプロイ | Vercel |
+| 言語 | TypeScript |
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 デモサイト
 
-To learn more about Next.js, take a look at the following resources:
+🔗 [https://gyaru-chappie-app.vercel.app/](https://gyaru-chappie-app.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---

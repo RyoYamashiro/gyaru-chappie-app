@@ -10,7 +10,11 @@ export default function Home() {
   const handleSend = () => {
     if (!input.trim()) return
 
-    const newLog = [...chatLog, { sender: 'あんた', text: input }, { sender: 'チャッピー', text: 'ぜったいあれ観るべきじゃん！「ラ・ラ・ランド」とかやば〜💜' }]
+    const newLog: { sender: 'あんた' | 'チャッピー'; text: string }[] = [
+      ...chatLog,
+      { sender: 'あんた', text: input },
+      { sender: 'チャッピー', text: 'ぜったいあれ観るべきじゃん！「ラ・ラ・ランド」とかやば〜💜' },
+    ]
     setChatLog(newLog)
     setInput('')
   }

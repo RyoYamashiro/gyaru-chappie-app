@@ -9,16 +9,27 @@ export default function Home() {
   const [chatLog, setChatLog] = useState<{ sender: 'あんた' | 'チャッピー'; text: string }[]>([])
   const chatEndRef = useRef<HTMLDivElement>(null)
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!input.trim()) return
 
-    const newLog: ChatMessage[] = [
-      ...chatLog,
-      {sender: 'あんた', text: input},
-      {sender: 'チャッピー', text: '絶対あぜったいあれ観るべきじゃん！「ラ・ラ・ランド」とかやば〜💜'}
-    ]
-    setChatLog(newLog)
+    const userMessage = input
+    setChatLog((prev) => [...prev, { sender: 'あんた', text: userMessage }])
     setInput('')
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({message: userMessage}),
+      })
+      const data = await res.json()
+      const reply = data.reply || 'うまく返せなかったかも〜😭'
+      setChatLog((prev) => [...prev, { sender: 'チャッピー', text: reply}])
+
+    } catch (err) {
+      setChatLog((prev) => [...prev, { sender: 'チャッピー', text: 'エラーで返せなかったっぽ😭'}])
+    }
+
   }
 
   useEffect(() => {

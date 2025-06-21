@@ -14,7 +14,7 @@ export default function Home() {
   const [chatLog, setChatLog] = useState<Message[]>([
     {
       sender: 'チャッピー',
-      text: 'どうも〜🌟原宿ギャルのチャッピーだよ💖\n話したいことあったら何でも言ってみて〜✨',
+      text: 'どうも〜🌟ギャルのチャッピーだよ💖\n話したいことあったら何でも言ってみて〜✨',
     },
   ])
   const chatEndRef = useRef<HTMLDivElement>(null)
@@ -42,7 +42,7 @@ export default function Home() {
   }, [chatLog])
 
   return (
-    <main className="min-h-screen bg-pink-200 flex flex-col items-center pt-20 px-4 pb-28 relative overflow-x-hidden overflow-y-auto" style={{ backgroundColor: '#fbcfe8' }}>
+    <main className="min-h-screen bg-pink-200 flex flex-col items-center pt-24 sm:pt-28 px-4 pb-28 relative overflow-x-hidden overflow-y-auto">
       <div className="fixed top-0 w-full max-w-md px-4 py-4 bg-pink-200 z-10">
         <h1 className="text-2xl font-bold text-pink-600 text-center">💄✨ チャッピーに任せて 🌈</h1>
       </div>

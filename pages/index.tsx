@@ -42,7 +42,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold text-pink-600 text-center">💄✨ チャッピーに任せて 🌈</h1>
       </div>
 
-      <ChatLog chatLog={chatLog} bottomRef={chatEndRef} />Add commentMore actions
+      <ChatLog chatLog={chatLog} bottomRef={chatEndRef} />
       <ChatInput input={input} setInput={setInput} onSend={handleSend} />
     </main>
   )

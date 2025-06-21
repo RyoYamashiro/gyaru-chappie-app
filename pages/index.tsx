@@ -11,7 +11,12 @@ type Message = {
 
 export default function Home() {
   const [input, setInput] = useState('')
-  const [chatLog, setChatLog] = useState<Message[]>([])
+  const [chatLog, setChatLog] = useState<Message[]>([
+    {
+      sender: 'チャッピー',
+      text: 'どうも〜🌟原宿ギャルのチャッピーだよ💖\n話したいことあったら何でも言ってみて〜✨',
+    },
+  ])
   const chatEndRef = useRef<HTMLDivElement>(null)
 
   const handleSend = async () => {

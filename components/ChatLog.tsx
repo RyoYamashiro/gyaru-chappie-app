@@ -16,7 +16,7 @@ export default function ChatLog({chatLog, bottomRef}: ChatLogProps) {
             {chatLog.map((item, index) => (
                 <ChatBubble key={index} sender={item.sender} text={item.text} />
             ))}
-            <div ref={bottomRef} />
+            <div ref={bottomRef} className="scroll-mt-24" />
         </div>
     )
 }
